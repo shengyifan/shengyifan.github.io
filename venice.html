@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_26116939dcca57bc5a6c4c6ea7ed97ec {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_26116939dcca57bc5a6c4c6ea7ed97ec" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_26116939dcca57bc5a6c4c6ea7ed97ec = L.map(
+                "map_26116939dcca57bc5a6c4c6ea7ed97ec",
+                {
+                    center: [45.434185, 12.337817],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+
+            
+
+        
+    
+            var tile_layer_04893a2f681f0169637bcd7f6b78d416 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var locate_control_b16bc7eb64d26968ddc5d5a144a93bcb = L.control.locate(
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+            
+        
+    
+            var marker_009cb629907145e345b2d8aaca5d69b7 = L.marker(
+                [45.434185, 12.337817],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_ae5dd2b23d1902741845eff5b5ee0f21 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_009cb629907145e345b2d8aaca5d69b7.setIcon(icon_ae5dd2b23d1902741845eff5b5ee0f21);
+        
+    
+        var popup_1dc4386372af1911574e4f76b6fce0ee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2e81d6341a4bfc03799014cb429946ab = $(`<div id="html_2e81d6341a4bfc03799014cb429946ab" style="width: 100.0%; height: 100.0%;">Piazza San Marco (圣马可广场)</div>`)[0];
+            popup_1dc4386372af1911574e4f76b6fce0ee.setContent(html_2e81d6341a4bfc03799014cb429946ab);
+        
+
+        marker_009cb629907145e345b2d8aaca5d69b7.bindPopup(popup_1dc4386372af1911574e4f76b6fce0ee)
+        ;
+
+        
+    
+    
+            marker_009cb629907145e345b2d8aaca5d69b7.bindTooltip(
+                `<div>
+                     Piazza San Marco (圣马可广场)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_cbd7eb349bbee2343cd6151e2925495c = L.marker(
+                [45.4345, 12.3396],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_f438af3804d1729049e0aaf7423e1b21 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_cbd7eb349bbee2343cd6151e2925495c.setIcon(icon_f438af3804d1729049e0aaf7423e1b21);
+        
+    
+        var popup_e3a17979015f1f86e6f5cfda31dfe1d0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ad5e8b5a3c61cda0a0f0f0ea1df29245 = $(`<div id="html_ad5e8b5a3c61cda0a0f0f0ea1df29245" style="width: 100.0%; height: 100.0%;">St. Mark's Basilica (圣马可大教堂)</div>`)[0];
+            popup_e3a17979015f1f86e6f5cfda31dfe1d0.setContent(html_ad5e8b5a3c61cda0a0f0f0ea1df29245);
+        
+
+        marker_cbd7eb349bbee2343cd6151e2925495c.bindPopup(popup_e3a17979015f1f86e6f5cfda31dfe1d0)
+        ;
+
+        
+    
+    
+            marker_cbd7eb349bbee2343cd6151e2925495c.bindTooltip(
+                `<div>
+                     St. Mark's Basilica (圣马可大教堂)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ec5be2ed74cc1a33b70aeeda99b4725 = L.marker(
+                [45.433899, 12.34],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_4084705e159012178ca41bbcf1744018 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_5ec5be2ed74cc1a33b70aeeda99b4725.setIcon(icon_4084705e159012178ca41bbcf1744018);
+        
+    
+        var popup_5f5c70eb53f09aeccb7a60d8ec19cbce = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f4d9bbf629d620dd92b42151e3540ade = $(`<div id="html_f4d9bbf629d620dd92b42151e3540ade" style="width: 100.0%; height: 100.0%;">Doge's Palace (总督府)</div>`)[0];
+            popup_5f5c70eb53f09aeccb7a60d8ec19cbce.setContent(html_f4d9bbf629d620dd92b42151e3540ade);
+        
+
+        marker_5ec5be2ed74cc1a33b70aeeda99b4725.bindPopup(popup_5f5c70eb53f09aeccb7a60d8ec19cbce)
+        ;
+
+        
+    
+    
+            marker_5ec5be2ed74cc1a33b70aeeda99b4725.bindTooltip(
+                `<div>
+                     Doge's Palace (总督府)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_876d14e13706c8721935f7b9b3c303ef = L.marker(
+                [45.438036, 12.335894],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_95e7dc81ff6acf9048849f66323a0bd4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_876d14e13706c8721935f7b9b3c303ef.setIcon(icon_95e7dc81ff6acf9048849f66323a0bd4);
+        
+    
+        var popup_1ffeb11a9d38b92cfef31a61c38b311d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_33f83ebd59c581b14b7adc307231cc7c = $(`<div id="html_33f83ebd59c581b14b7adc307231cc7c" style="width: 100.0%; height: 100.0%;">Rialto Bridge (里亚托桥)</div>`)[0];
+            popup_1ffeb11a9d38b92cfef31a61c38b311d.setContent(html_33f83ebd59c581b14b7adc307231cc7c);
+        
+
+        marker_876d14e13706c8721935f7b9b3c303ef.bindPopup(popup_1ffeb11a9d38b92cfef31a61c38b311d)
+        ;
+
+        
+    
+    
+            marker_876d14e13706c8721935f7b9b3c303ef.bindTooltip(
+                `<div>
+                     Rialto Bridge (里亚托桥)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6fbb511e56746704472fdae199b74636 = L.marker(
+                [45.43406, 12.34086],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_e530a50b3551986449aa955c9af15af3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_6fbb511e56746704472fdae199b74636.setIcon(icon_e530a50b3551986449aa955c9af15af3);
+        
+    
+        var popup_3b052f1d96a8d323d8282932afa4d11e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0452c0105466795be98ba71f2b9a6c2a = $(`<div id="html_0452c0105466795be98ba71f2b9a6c2a" style="width: 100.0%; height: 100.0%;">Bridge of Sighs (叹息桥)</div>`)[0];
+            popup_3b052f1d96a8d323d8282932afa4d11e.setContent(html_0452c0105466795be98ba71f2b9a6c2a);
+        
+
+        marker_6fbb511e56746704472fdae199b74636.bindPopup(popup_3b052f1d96a8d323d8282932afa4d11e)
+        ;
+
+        
+    
+    
+            marker_6fbb511e56746704472fdae199b74636.bindTooltip(
+                `<div>
+                     Bridge of Sighs (叹息桥)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f7f1c04dee68159e2832dda870982915 = L.marker(
+                [45.425164, 12.334],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_5d1bed2efd5dc2101ec8331b7d4a1155 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_f7f1c04dee68159e2832dda870982915.setIcon(icon_5d1bed2efd5dc2101ec8331b7d4a1155);
+        
+    
+        var popup_01dd3120deff845ebdbc5749bce8bee1 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6dd39b8d8a3132b9c3eac7a49164a968 = $(`<div id="html_6dd39b8d8a3132b9c3eac7a49164a968" style="width: 100.0%; height: 100.0%;">Santa Maria della Salute (圣玛利亚德拉萨鲁特教堂)</div>`)[0];
+            popup_01dd3120deff845ebdbc5749bce8bee1.setContent(html_6dd39b8d8a3132b9c3eac7a49164a968);
+        
+
+        marker_f7f1c04dee68159e2832dda870982915.bindPopup(popup_01dd3120deff845ebdbc5749bce8bee1)
+        ;
+
+        
+    
+    
+            marker_f7f1c04dee68159e2832dda870982915.bindTooltip(
+                `<div>
+                     Santa Maria della Salute (圣玛利亚德拉萨鲁特教堂)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0a0318a717f13ad03fa9fc3cdeb45060 = L.marker(
+                [45.43139, 12.32806],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_ec8814056af5b9402bae668008596c67 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_0a0318a717f13ad03fa9fc3cdeb45060.setIcon(icon_ec8814056af5b9402bae668008596c67);
+        
+    
+        var popup_7ac41e1db420f8e2c0e429077e8865a0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_557981377732344cc13190db5f86b82c = $(`<div id="html_557981377732344cc13190db5f86b82c" style="width: 100.0%; height: 100.0%;">Gallerie dell'Accademia (学院美术馆)</div>`)[0];
+            popup_7ac41e1db420f8e2c0e429077e8865a0.setContent(html_557981377732344cc13190db5f86b82c);
+        
+
+        marker_0a0318a717f13ad03fa9fc3cdeb45060.bindPopup(popup_7ac41e1db420f8e2c0e429077e8865a0)
+        ;
+
+        
+    
+    
+            marker_0a0318a717f13ad03fa9fc3cdeb45060.bindTooltip(
+                `<div>
+                     Gallerie dell'Accademia (学院美术馆)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4b4c36564902d6416aeab66435c3662f = L.marker(
+                [45.430783, 12.331537],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_147e5d83a67677b9bafac10ec0fb0ded = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4b4c36564902d6416aeab66435c3662f.setIcon(icon_147e5d83a67677b9bafac10ec0fb0ded);
+        
+    
+        var popup_61b68ccddcf1c9f5bee69eed86e91e22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_af0f44d356baa7bf0eb05502db74b235 = $(`<div id="html_af0f44d356baa7bf0eb05502db74b235" style="width: 100.0%; height: 100.0%;">Peggy Guggenheim Collection (佩吉·古根海姆美术馆)</div>`)[0];
+            popup_61b68ccddcf1c9f5bee69eed86e91e22.setContent(html_af0f44d356baa7bf0eb05502db74b235);
+        
+
+        marker_4b4c36564902d6416aeab66435c3662f.bindPopup(popup_61b68ccddcf1c9f5bee69eed86e91e22)
+        ;
+
+        
+    
+    
+            marker_4b4c36564902d6416aeab66435c3662f.bindTooltip(
+                `<div>
+                     Peggy Guggenheim Collection (佩吉·古根海姆美术馆)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e90bbd61ab0531a101b720f033c9fa55 = L.marker(
+                [45.4337, 12.3339],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_ea65e313376e17aaafd0d6ec533f9808 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_e90bbd61ab0531a101b720f033c9fa55.setIcon(icon_ea65e313376e17aaafd0d6ec533f9808);
+        
+    
+        var popup_6c00c7dd6126d0ff4d8b1b2ca8d3b081 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3625bbb685ea788c4798e45e3ad9acbf = $(`<div id="html_3625bbb685ea788c4798e45e3ad9acbf" style="width: 100.0%; height: 100.0%;">Teatro La Fenice (凤凰歌剧院)</div>`)[0];
+            popup_6c00c7dd6126d0ff4d8b1b2ca8d3b081.setContent(html_3625bbb685ea788c4798e45e3ad9acbf);
+        
+
+        marker_e90bbd61ab0531a101b720f033c9fa55.bindPopup(popup_6c00c7dd6126d0ff4d8b1b2ca8d3b081)
+        ;
+
+        
+    
+    
+            marker_e90bbd61ab0531a101b720f033c9fa55.bindTooltip(
+                `<div>
+                     Teatro La Fenice (凤凰歌剧院)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3aa8fabbb63b6f0ead9cae98f887742e = L.marker(
+                [45.4575, 12.35361],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_28a2bd11b2a13c470e89d31f55921dae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3aa8fabbb63b6f0ead9cae98f887742e.setIcon(icon_28a2bd11b2a13c470e89d31f55921dae);
+        
+    
+        var popup_886fa5a752e6f4921e1ed88b965e349c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f569a1a312d0296531c415cfb824df3 = $(`<div id="html_5f569a1a312d0296531c415cfb824df3" style="width: 100.0%; height: 100.0%;">Murano Island (穆拉诺岛)</div>`)[0];
+            popup_886fa5a752e6f4921e1ed88b965e349c.setContent(html_5f569a1a312d0296531c415cfb824df3);
+        
+
+        marker_3aa8fabbb63b6f0ead9cae98f887742e.bindPopup(popup_886fa5a752e6f4921e1ed88b965e349c)
+        ;
+
+        
+    
+    
+            marker_3aa8fabbb63b6f0ead9cae98f887742e.bindTooltip(
+                `<div>
+                     Murano Island (穆拉诺岛)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4426f5c5d00ac4dfbf497735e2fb7e64 = L.marker(
+                [45.485771, 12.417487],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_8fd879f71b031b986010be9ebe2c9a55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_4426f5c5d00ac4dfbf497735e2fb7e64.setIcon(icon_8fd879f71b031b986010be9ebe2c9a55);
+        
+    
+        var popup_def8c21d927cdc639ff4e3d1d9a0f89d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23745a606eabc503aaf57b2003df5144 = $(`<div id="html_23745a606eabc503aaf57b2003df5144" style="width: 100.0%; height: 100.0%;">Burano Island (布拉诺岛)</div>`)[0];
+            popup_def8c21d927cdc639ff4e3d1d9a0f89d.setContent(html_23745a606eabc503aaf57b2003df5144);
+        
+
+        marker_4426f5c5d00ac4dfbf497735e2fb7e64.bindPopup(popup_def8c21d927cdc639ff4e3d1d9a0f89d)
+        ;
+
+        
+    
+    
+            marker_4426f5c5d00ac4dfbf497735e2fb7e64.bindTooltip(
+                `<div>
+                     Burano Island (布拉诺岛)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_82113dec59d3e384c12a6f2022ee3a70 = L.marker(
+                [45.44416, 12.32785],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_8133b988ea5cb111481039b2f138ef28 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_82113dec59d3e384c12a6f2022ee3a70.setIcon(icon_8133b988ea5cb111481039b2f138ef28);
+        
+    
+        var popup_5ff18fea22ce4f633fadb464cfd34bf2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_ae940fb25b1af53a1815cb1927db960b = $(`<div id="html_ae940fb25b1af53a1815cb1927db960b" style="width: 100.0%; height: 100.0%;">Ponte de Chiodo 钉桥</div>`)[0];
+            popup_5ff18fea22ce4f633fadb464cfd34bf2.setContent(html_ae940fb25b1af53a1815cb1927db960b);
+        
+
+        marker_82113dec59d3e384c12a6f2022ee3a70.bindPopup(popup_5ff18fea22ce4f633fadb464cfd34bf2)
+        ;
+
+        
+    
+    
+            marker_82113dec59d3e384c12a6f2022ee3a70.bindTooltip(
+                `<div>
+                     Ponte de Chiodo 钉桥
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_bbed25134779780e4f8eee985a3f2723 = L.marker(
+                [45.43327, 12.33232],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_2664a02b63add3b3854c079dab576d42 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bbed25134779780e4f8eee985a3f2723.setIcon(icon_2664a02b63add3b3854c079dab576d42);
+        
+    
+        var popup_6f9020b24e1b2ede580ce938cab056cc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_408fdd519c0f6d294f6b11d317839247 = $(`<div id="html_408fdd519c0f6d294f6b11d317839247" style="width: 100.0%; height: 100.0%;">Scala Contarini del Bovolo 旋螺楼梯</div>`)[0];
+            popup_6f9020b24e1b2ede580ce938cab056cc.setContent(html_408fdd519c0f6d294f6b11d317839247);
+        
+
+        marker_bbed25134779780e4f8eee985a3f2723.bindPopup(popup_6f9020b24e1b2ede580ce938cab056cc)
+        ;
+
+        
+    
+    
+            marker_bbed25134779780e4f8eee985a3f2723.bindTooltip(
+                `<div>
+                     Scala Contarini del Bovolo 旋螺楼梯
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0aff911ed03a13a9c4b382f56bcee6a9 = L.marker(
+                [45.43032, 12.32463],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_65e7a02af1f4c42aa3f55377e57df3cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0aff911ed03a13a9c4b382f56bcee6a9.setIcon(icon_65e7a02af1f4c42aa3f55377e57df3cc);
+        
+    
+        var popup_aa67d5d26382561019f4e34c4939ea92 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_de3583e825b239681d22150bd26ce6fa = $(`<div id="html_de3583e825b239681d22150bd26ce6fa" style="width: 100.0%; height: 100.0%;">Squero di San Trovaso 贡多拉船厂</div>`)[0];
+            popup_aa67d5d26382561019f4e34c4939ea92.setContent(html_de3583e825b239681d22150bd26ce6fa);
+        
+
+        marker_0aff911ed03a13a9c4b382f56bcee6a9.bindPopup(popup_aa67d5d26382561019f4e34c4939ea92)
+        ;
+
+        
+    
+    
+            marker_0aff911ed03a13a9c4b382f56bcee6a9.bindTooltip(
+                `<div>
+                     Squero di San Trovaso 贡多拉船厂
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8be3dc595652d0dc75399e30e137d58b = L.marker(
+                [45.43656, 12.35375],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_58e1ae50b632b5962625c8a911a61dec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8be3dc595652d0dc75399e30e137d58b.setIcon(icon_58e1ae50b632b5962625c8a911a61dec);
+        
+    
+        var popup_920175a771fc084879ee87a8bff98636 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_12a10e0c3f31a0989024909e22d37e09 = $(`<div id="html_12a10e0c3f31a0989024909e22d37e09" style="width: 100.0%; height: 100.0%;">Ocean Space (Chiesa di San Lorenzo)</div>`)[0];
+            popup_920175a771fc084879ee87a8bff98636.setContent(html_12a10e0c3f31a0989024909e22d37e09);
+        
+
+        marker_8be3dc595652d0dc75399e30e137d58b.bindPopup(popup_920175a771fc084879ee87a8bff98636)
+        ;
+
+        
+    
+    
+            marker_8be3dc595652d0dc75399e30e137d58b.bindTooltip(
+                `<div>
+                     Ocean Space (Chiesa di San Lorenzo)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a55390ef688fbd3eec961edaaad59f09 = L.marker(
+                [45.43898, 12.34696],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_08b9e97be4b01a1a654ce46f31ddc8a9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a55390ef688fbd3eec961edaaad59f09.setIcon(icon_08b9e97be4b01a1a654ce46f31ddc8a9);
+        
+    
+        var popup_ea18b64c177377bfb9ac60fe93194334 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_076d6c2726664951ce2e72cb0f0d1427 = $(`<div id="html_076d6c2726664951ce2e72cb0f0d1427" style="width: 100.0%; height: 100.0%;">San Francesco della Vigna 修道院教堂</div>`)[0];
+            popup_ea18b64c177377bfb9ac60fe93194334.setContent(html_076d6c2726664951ce2e72cb0f0d1427);
+        
+
+        marker_a55390ef688fbd3eec961edaaad59f09.bindPopup(popup_ea18b64c177377bfb9ac60fe93194334)
+        ;
+
+        
+    
+    
+            marker_a55390ef688fbd3eec961edaaad59f09.bindTooltip(
+                `<div>
+                     San Francesco della Vigna 修道院教堂
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_80a795676ef518d82f701482555aec6e = L.marker(
+                [45.43405, 12.34319],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_8e762448403d91736d0d764eed364941 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_80a795676ef518d82f701482555aec6e.setIcon(icon_8e762448403d91736d0d764eed364941);
+        
+    
+        var popup_2f0a1056b323043236db377cd032ce48 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_13b66b9c089a1757338cb2acc064d6a5 = $(`<div id="html_13b66b9c089a1757338cb2acc064d6a5" style="width: 100.0%; height: 100.0%;">San Zaccaria 洪水密室</div>`)[0];
+            popup_2f0a1056b323043236db377cd032ce48.setContent(html_13b66b9c089a1757338cb2acc064d6a5);
+        
+
+        marker_80a795676ef518d82f701482555aec6e.bindPopup(popup_2f0a1056b323043236db377cd032ce48)
+        ;
+
+        
+    
+    
+            marker_80a795676ef518d82f701482555aec6e.bindTooltip(
+                `<div>
+                     San Zaccaria 洪水密室
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c8c0f14757ddfea8ddd2d543c95ee5d8 = L.marker(
+                [45.44389, 12.33164],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_517e5fb493d422eafc208592f9d82174 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c8c0f14757ddfea8ddd2d543c95ee5d8.setIcon(icon_517e5fb493d422eafc208592f9d82174);
+        
+    
+        var popup_3efa6a9ed8accede6d2e223009f7b548 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a2ff56984dcf71eb39b087940300cc0f = $(`<div id="html_a2ff56984dcf71eb39b087940300cc0f" style="width: 100.0%; height: 100.0%;">Ghetto & Calle Varisco 犹太区/幽灵巷</div>`)[0];
+            popup_3efa6a9ed8accede6d2e223009f7b548.setContent(html_a2ff56984dcf71eb39b087940300cc0f);
+        
+
+        marker_c8c0f14757ddfea8ddd2d543c95ee5d8.bindPopup(popup_3efa6a9ed8accede6d2e223009f7b548)
+        ;
+
+        
+    
+    
+            marker_c8c0f14757ddfea8ddd2d543c95ee5d8.bindTooltip(
+                `<div>
+                     Ghetto & Calle Varisco 犹太区/幽灵巷
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0e3608a7bfb830d124791ffac45f1e24 = L.marker(
+                [45.4681, 12.3902],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_3b7b92c596ab63058c2319dad996c88a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0e3608a7bfb830d124791ffac45f1e24.setIcon(icon_3b7b92c596ab63058c2319dad996c88a);
+        
+    
+        var popup_f62b104eb03412852bfbdd09a6ce2044 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8189d011496e3225e7e6509544bb29b4 = $(`<div id="html_8189d011496e3225e7e6509544bb29b4" style="width: 100.0%; height: 100.0%;">Sant’Erasmo 蔬菜花园岛</div>`)[0];
+            popup_f62b104eb03412852bfbdd09a6ce2044.setContent(html_8189d011496e3225e7e6509544bb29b4);
+        
+
+        marker_0e3608a7bfb830d124791ffac45f1e24.bindPopup(popup_f62b104eb03412852bfbdd09a6ce2044)
+        ;
+
+        
+    
+    
+            marker_0e3608a7bfb830d124791ffac45f1e24.bindTooltip(
+                `<div>
+                     Sant’Erasmo 蔬菜花园岛
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c38f1dcde17fb7186fdea4d28141f76 = L.marker(
+                [45.5026, 12.4199],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_bde122e8700d93756cdc16cd187dda0f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7c38f1dcde17fb7186fdea4d28141f76.setIcon(icon_bde122e8700d93756cdc16cd187dda0f);
+        
+    
+        var popup_f3e5e68bce95fa55ce05795b5d8f1393 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_29b62b0a3c9af530f7eb207b70f1cd30 = $(`<div id="html_29b62b0a3c9af530f7eb207b70f1cd30" style="width: 100.0%; height: 100.0%;">Torcello 托尔切洛岛</div>`)[0];
+            popup_f3e5e68bce95fa55ce05795b5d8f1393.setContent(html_29b62b0a3c9af530f7eb207b70f1cd30);
+        
+
+        marker_7c38f1dcde17fb7186fdea4d28141f76.bindPopup(popup_f3e5e68bce95fa55ce05795b5d8f1393)
+        ;
+
+        
+    
+    
+            marker_7c38f1dcde17fb7186fdea4d28141f76.bindTooltip(
+                `<div>
+                     Torcello 托尔切洛岛
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7c03f5f2c40696be6708ff0d92eacea1 = L.marker(
+                [45.43226, 12.33063],
+                {}
+            ).addTo(map_26116939dcca57bc5a6c4c6ea7ed97ec);
+        
+    
+            var icon_5e71d78b1f36292b3e126f912b982ee0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "star", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_7c03f5f2c40696be6708ff0d92eacea1.setIcon(icon_5e71d78b1f36292b3e126f912b982ee0);
+        
+    
+        var popup_265026aaa5fbb6ef393173495a6b867d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_928b5230767ec8f8afbc868add575e32 = $(`<div id="html_928b5230767ec8f8afbc868add575e32" style="width: 100.0%; height: 100.0%;">Campo San Maurizio 古董跳蚤市</div>`)[0];
+            popup_265026aaa5fbb6ef393173495a6b867d.setContent(html_928b5230767ec8f8afbc868add575e32);
+        
+
+        marker_7c03f5f2c40696be6708ff0d92eacea1.bindPopup(popup_265026aaa5fbb6ef393173495a6b867d)
+        ;
+
+        
+    
+    
+            marker_7c03f5f2c40696be6708ff0d92eacea1.bindTooltip(
+                `<div>
+                     Campo San Maurizio 古董跳蚤市
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
