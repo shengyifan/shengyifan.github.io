@@ -1,76 +1,293 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="utf-8" />
-<title>Milan Interactive Sightseeing Map</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
- integrity="sha512-sA+ePHwPEHpm4oeqh+QlJg2mE5ZaCx5KkkusJqJWq0WyZTBtg8j3AKXChoCcVOFKfSln0Fa+6ZfGxN8H+NodXw=="
- crossorigin=""/>
-<!-- LocateControl CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css"/>
-<style>
-  body, html { height: 100%; margin: 0; }
-  #map { width: 100%; height: 100%; }
-</style>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_93fbf9d1e5a7a1482d52cc05005dc1de {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.66.2/L.Control.Locate.min.css"/>
 </head>
 <body>
-<div id="map"></div>
-
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
- integrity="sha512-VzE9IXkJ8dl1VXW5KaCwJ00z7fZ+Uwq8FTnk/qsVp7Qz3NHX2AA4iUbUBDwpdhIt6Hg2Dxid60KkQmQ2tzE6Eg=="
- crossorigin=""></script>
-<!-- LocateControl JS -->
-<script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
-
-<script>
-// Initialize the map centered on Milan
-var map = L.map('map').setView([45.4642, 9.19], 13);
-
-// Add OpenStreetMap tiles
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-}).addTo(map);
-
-// Attractions list with bilingual names
-var attractions = [
-    {lat: 45.4640, lon: 9.1916, en: "Milan Cathedral", cn: "米兰大教堂"},
-    {lat: 45.4660, lon: 9.1899, en: "Galleria Vittorio Emanuele II", cn: "艾曼纽二世拱廊"},
-    {lat: 45.4709, lon: 9.1790, en: "Sforzesco Castle", cn: "斯福尔扎城堡"},
-    {lat: 45.4668, lon: 9.1701, en: "Santa Maria delle Grazie & ‘The Last Supper’", cn: "圣玛利亚感恩教堂/《最后的晚餐》"},
-    {lat: 45.4670, lon: 9.1896, en: "La Scala Opera House", cn: "斯卡拉歌剧院"},
-    {lat: 45.4527, lon: 9.1806, en: "Navigli Canals District", cn: "纳维廖运河区"},
-    {lat: 45.4720, lon: 9.1842, en: "Brera Art Gallery", cn: "布雷拉美术馆"}
-];
-
-// Add markers
-attractions.forEach(function(p) {
-    L.marker([p.lat, p.lon])
-     .addTo(map)
-     .bindPopup("<b>" + p.en + "</b><br/>" + p.cn)
-     .bindTooltip(p.en + " / " + p.cn);
-});
-
-// Add Locate Control to show real‑time location
-L.control.locate({
-    position: 'topleft',
-    strings: {
-        title: "Show me where I am"
-    },
-    flyTo: true,
-    keepCurrentZoomLevel: false,
-    showPopup: true,
-    locateOptions: {
-        enableHighAccuracy: true,
-        maxZoom: 16,
-        watch: true,
-        maximumAge: 10000
-    }
-}).addTo(map);
-
-</script>
+    
+    
+            <div class="folium-map" id="map_93fbf9d1e5a7a1482d52cc05005dc1de" ></div>
+        
 </body>
+<script>
+    
+    
+            var map_93fbf9d1e5a7a1482d52cc05005dc1de = L.map(
+                "map_93fbf9d1e5a7a1482d52cc05005dc1de",
+                {
+                    center: [45.4642, 9.19],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+            L.control.scale().addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+
+            
+
+        
+    
+            var tile_layer_770a968409b4e8458b21d27eed52c319 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+            var marker_bf8183d9b9411dc60eaef538353ecc4b = L.marker(
+                [45.4642, 9.19],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_feecd927281100990b4ec00f2c0801ba = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f0ff451496f6fc7575c8b427df185ef7 = $(`<div id="html_f0ff451496f6fc7575c8b427df185ef7" style="width: 100.0%; height: 100.0%;">Duomo di Milano / 米兰大教堂</div>`)[0];
+            popup_feecd927281100990b4ec00f2c0801ba.setContent(html_f0ff451496f6fc7575c8b427df185ef7);
+        
+
+        marker_bf8183d9b9411dc60eaef538353ecc4b.bindPopup(popup_feecd927281100990b4ec00f2c0801ba)
+        ;
+
+        
+    
+    
+            marker_bf8183d9b9411dc60eaef538353ecc4b.bindTooltip(
+                `<div>
+                     Duomo di Milano
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_33be68936cab5488401a4b0726318ed8 = L.marker(
+                [45.4668, 9.1905],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_f5c00b09b18321808d299c784d3dc09a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1161ca7adef7698fc7feb12a2069e3f9 = $(`<div id="html_1161ca7adef7698fc7feb12a2069e3f9" style="width: 100.0%; height: 100.0%;">Galleria Vittorio Emanuele II / 艾曼纽二世拱廊</div>`)[0];
+            popup_f5c00b09b18321808d299c784d3dc09a.setContent(html_1161ca7adef7698fc7feb12a2069e3f9);
+        
+
+        marker_33be68936cab5488401a4b0726318ed8.bindPopup(popup_f5c00b09b18321808d299c784d3dc09a)
+        ;
+
+        
+    
+    
+            marker_33be68936cab5488401a4b0726318ed8.bindTooltip(
+                `<div>
+                     Galleria Vittorio Emanuele II
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a02e7ef282edaeff4dc1fbe9924bf0ab = L.marker(
+                [45.47, 9.1793],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_f96a9fa85ac9b8f5b29b36a9cf676a7f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_101a559d059d0036037ee00e78e5466b = $(`<div id="html_101a559d059d0036037ee00e78e5466b" style="width: 100.0%; height: 100.0%;">Castello Sforzesco / 斯福尔扎城堡</div>`)[0];
+            popup_f96a9fa85ac9b8f5b29b36a9cf676a7f.setContent(html_101a559d059d0036037ee00e78e5466b);
+        
+
+        marker_a02e7ef282edaeff4dc1fbe9924bf0ab.bindPopup(popup_f96a9fa85ac9b8f5b29b36a9cf676a7f)
+        ;
+
+        
+    
+    
+            marker_a02e7ef282edaeff4dc1fbe9924bf0ab.bindTooltip(
+                `<div>
+                     Castello Sforzesco
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0113e2cdd2601d50a1a2eef049663595 = L.marker(
+                [45.4658, 9.17],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_997d46f7b008577f3f7132bd10bd1383 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bbfaedc28480c961c5dfcd4ed87bfc78 = $(`<div id="html_bbfaedc28480c961c5dfcd4ed87bfc78" style="width: 100.0%; height: 100.0%;">Santa Maria delle Grazie (Last Supper) / 圣玛利亚感恩圣殿（最后的晚餐）</div>`)[0];
+            popup_997d46f7b008577f3f7132bd10bd1383.setContent(html_bbfaedc28480c961c5dfcd4ed87bfc78);
+        
+
+        marker_0113e2cdd2601d50a1a2eef049663595.bindPopup(popup_997d46f7b008577f3f7132bd10bd1383)
+        ;
+
+        
+    
+    
+            marker_0113e2cdd2601d50a1a2eef049663595.bindTooltip(
+                `<div>
+                     Santa Maria delle Grazie (Last Supper)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_456750b4f3f3135629c5bd2278e36778 = L.marker(
+                [45.467, 9.1899],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_05c20067584c7787783e3aadc5df8f3a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1a95de09482fb0a5dd870806218b4152 = $(`<div id="html_1a95de09482fb0a5dd870806218b4152" style="width: 100.0%; height: 100.0%;">Teatro alla Scala / 斯卡拉歌剧院</div>`)[0];
+            popup_05c20067584c7787783e3aadc5df8f3a.setContent(html_1a95de09482fb0a5dd870806218b4152);
+        
+
+        marker_456750b4f3f3135629c5bd2278e36778.bindPopup(popup_05c20067584c7787783e3aadc5df8f3a)
+        ;
+
+        
+    
+    
+            marker_456750b4f3f3135629c5bd2278e36778.bindTooltip(
+                `<div>
+                     Teatro alla Scala
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fda1857447a3b58515257c639621dfb2 = L.marker(
+                [45.4712, 9.188],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_dc34d477f2d7b9d677a11f7689e1e771 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8564be866cf7d468877043f5443b23ed = $(`<div id="html_8564be866cf7d468877043f5443b23ed" style="width: 100.0%; height: 100.0%;">Pinacoteca di Brera / 布雷拉美术馆</div>`)[0];
+            popup_dc34d477f2d7b9d677a11f7689e1e771.setContent(html_8564be866cf7d468877043f5443b23ed);
+        
+
+        marker_fda1857447a3b58515257c639621dfb2.bindPopup(popup_dc34d477f2d7b9d677a11f7689e1e771)
+        ;
+
+        
+    
+    
+            marker_fda1857447a3b58515257c639621dfb2.bindTooltip(
+                `<div>
+                     Pinacoteca di Brera
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed70fe3d6114a5354b330bdb88265570 = L.marker(
+                [45.4513, 9.1842],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_48b483c9c1c167daf471ba3c7b5e9663 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_512f9b275a74efa03a5a8cad1e0036ca = $(`<div id="html_512f9b275a74efa03a5a8cad1e0036ca" style="width: 100.0%; height: 100.0%;">Navigli Canals / 纳维利运河区</div>`)[0];
+            popup_48b483c9c1c167daf471ba3c7b5e9663.setContent(html_512f9b275a74efa03a5a8cad1e0036ca);
+        
+
+        marker_ed70fe3d6114a5354b330bdb88265570.bindPopup(popup_48b483c9c1c167daf471ba3c7b5e9663)
+        ;
+
+        
+    
+    
+            marker_ed70fe3d6114a5354b330bdb88265570.bindTooltip(
+                `<div>
+                     Navigli Canals
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a7e8d21aab3f65076d307f7d8cd55ccf = L.marker(
+                [45.4781, 9.124],
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+        
+    
+        var popup_e0c71bb54dbd3e64c21749b4da0c2da7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c38619f1f4090eab5267078fdc1f7833 = $(`<div id="html_c38619f1f4090eab5267078fdc1f7833" style="width: 100.0%; height: 100.0%;">San Siro Stadium / 圣西罗球场</div>`)[0];
+            popup_e0c71bb54dbd3e64c21749b4da0c2da7.setContent(html_c38619f1f4090eab5267078fdc1f7833);
+        
+
+        marker_a7e8d21aab3f65076d307f7d8cd55ccf.bindPopup(popup_e0c71bb54dbd3e64c21749b4da0c2da7)
+        ;
+
+        
+    
+    
+            marker_a7e8d21aab3f65076d307f7d8cd55ccf.bindTooltip(
+                `<div>
+                     San Siro Stadium
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var locate_control_21a2f8beca618f07dafb5f6867acfb7b = L.control.locate(
+                {}
+            ).addTo(map_93fbf9d1e5a7a1482d52cc05005dc1de);
+            
+        
+</script>
 </html>
