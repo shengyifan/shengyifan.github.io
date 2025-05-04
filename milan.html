@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Milan Interactive Sightseeing Map</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+ integrity="sha512-sA+ePHwPEHpm4oeqh+QlJg2mE5ZaCx5KkkusJqJWq0WyZTBtg8j3AKXChoCcVOFKfSln0Fa+6ZfGxN8H+NodXw=="
+ crossorigin=""/>
+<!-- LocateControl CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.css"/>
+<style>
+  body, html { height: 100%; margin: 0; }
+  #map { width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="map"></div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha512-VzE9IXkJ8dl1VXW5KaCwJ00z7fZ+Uwq8FTnk/qsVp7Qz3NHX2AA4iUbUBDwpdhIt6Hg2Dxid60KkQmQ2tzE6Eg=="
+ crossorigin=""></script>
+<!-- LocateControl JS -->
+<script src="https://unpkg.com/leaflet.locatecontrol/dist/L.Control.Locate.min.js"></script>
+
+<script>
+// Initialize the map centered on Milan
+var map = L.map('map').setView([45.4642, 9.19], 13);
+
+// Add OpenStreetMap tiles
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+// Attractions list with bilingual names
+var attractions = [
+    {lat: 45.4640, lon: 9.1916, en: "Milan Cathedral", cn: "米兰大教堂"},
+    {lat: 45.4660, lon: 9.1899, en: "Galleria Vittorio Emanuele II", cn: "艾曼纽二世拱廊"},
+    {lat: 45.4709, lon: 9.1790, en: "Sforzesco Castle", cn: "斯福尔扎城堡"},
+    {lat: 45.4668, lon: 9.1701, en: "Santa Maria delle Grazie & ‘The Last Supper’", cn: "圣玛利亚感恩教堂/《最后的晚餐》"},
+    {lat: 45.4670, lon: 9.1896, en: "La Scala Opera House", cn: "斯卡拉歌剧院"},
+    {lat: 45.4527, lon: 9.1806, en: "Navigli Canals District", cn: "纳维廖运河区"},
+    {lat: 45.4720, lon: 9.1842, en: "Brera Art Gallery", cn: "布雷拉美术馆"}
+];
+
+// Add markers
+attractions.forEach(function(p) {
+    L.marker([p.lat, p.lon])
+     .addTo(map)
+     .bindPopup("<b>" + p.en + "</b><br/>" + p.cn)
+     .bindTooltip(p.en + " / " + p.cn);
+});
+
+// Add Locate Control to show real‑time location
+L.control.locate({
+    position: 'topleft',
+    strings: {
+        title: "Show me where I am"
+    },
+    flyTo: true,
+    keepCurrentZoomLevel: false,
+    showPopup: true,
+    locateOptions: {
+        enableHighAccuracy: true,
+        maxZoom: 16,
+        watch: true,
+        maximumAge: 10000
+    }
+}).addTo(map);
+
+</script>
+</body>
+</html>
