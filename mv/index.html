@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="李白《梦游天姥吟留别》25帧电影分镜与Seedance 2.0长镜头提示词">
+  <title>梦游天姥 · 长镜头视觉诗</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <header class="hero">
+    <nav class="topbar" aria-label="页面导航">
+      <a class="brand" href="#top">梦游天姥</a>
+      <div class="nav-links">
+        <a href="#filmstrip">25帧</a>
+        <a href="#continuity">连续性</a>
+        <a href="#source">原文</a>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="top">
+      <p class="eyebrow">A 25-FRAME CINEMATIC POEM</p>
+      <h1>梦游天姥<br><span>长镜头视觉诗</span></h1>
+      <p class="hero-copy">以真实世界电影语言重构李白的梦、醒与自由。25张首尾帧，24段可无缝衔接的 Seedance 2.0 单镜头提示词。</p>
+      <div class="hero-meta" id="hero-meta" aria-live="polite"></div>
+      <a class="primary-link" href="#filmstrip">进入梦境 <span>↓</span></a>
+    </div>
+
+    <div class="hero-orbit" aria-hidden="true">
+      <span class="moon"></span>
+      <span class="orbit-line"></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="manifesto section-shell" id="continuity">
+      <div>
+        <p class="section-kicker">Continuity Bible</p>
+        <h2>一人，一鹿，一轮月</h2>
+      </div>
+      <div class="manifesto-copy">
+        <p id="continuity-copy">正在读取连续性设定…</p>
+        <ul id="global-rules" class="rule-list"></ul>
+      </div>
+    </section>
+
+    <section class="controls section-shell" aria-label="分镜控制">
+      <div>
+        <p class="section-kicker">Storyboard</p>
+        <h2 id="filmstrip">二十五帧</h2>
+      </div>
+      <div class="control-actions">
+        <label class="search">
+          <span class="sr-only">搜索诗句或场景</span>
+          <input id="search-input" type="search" placeholder="搜索诗句 / 场景">
+        </label>
+        <button id="expand-all" class="ghost-button" type="button">展开全部提示词</button>
+      </div>
+    </section>
+
+    <section class="scene-list section-shell" id="scene-list" aria-live="polite">
+      <div class="loading">正在展开云海…</div>
+    </section>
+
+    <section class="source section-shell" id="source">
+      <div>
+        <p class="section-kicker">Original Poem</p>
+        <h2>诗文原稿</h2>
+      </div>
+      <pre id="poem-source">正在读取 poem.txt…</pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>唐 · 李白《梦游天姥吟留别》</p>
+    <p>图像：GPT Image 2 指定 · 16:9｜视频：Seedance 2.0 首尾帧长镜头</p>
+  </footer>
+
+  <template id="scene-template">
+    <article class="scene">
+      <div class="scene-index" aria-hidden="true"></div>
+      <figure class="scene-visual">
+        <img loading="lazy" alt="">
+        <figcaption>
+          <span class="scene-type"></span>
+          <span class="scene-file"></span>
+        </figcaption>
+      </figure>
+      <div class="scene-copy">
+        <header>
+          <p class="scene-number"></p>
+          <h3></h3>
+          <blockquote></blockquote>
+        </header>
+        <details class="prompt-block">
+          <summary>GPT Image 2 · 完整创作提示词</summary>
+          <div class="prompt-body">
+            <button class="copy-button" type="button">复制</button>
+            <p class="creative-prompt"></p>
+          </div>
+        </details>
+        <details class="prompt-block generation-block">
+          <summary>实际生成提示词 · 完整保留</summary>
+          <div class="prompt-body">
+            <button class="copy-button" type="button">复制</button>
+            <p class="generation-prompt"></p>
+          </div>
+        </details>
+      </div>
+    </article>
+  </template>
+
+  <template id="transition-template">
+    <article class="transition">
+      <div class="transition-path" aria-hidden="true">
+        <span></span>
+        <i></i>
+        <span></span>
+      </div>
+      <div class="transition-heading">
+        <p class="transition-number"></p>
+        <h4></h4>
+        <span class="frame-pair"></span>
+      </div>
+      <details class="prompt-block video-block">
+        <summary>Seedance 2.0 · 首尾帧长镜头提示词</summary>
+        <div class="prompt-body">
+          <button class="copy-button" type="button">复制</button>
+          <p class="video-prompt"></p>
+        </div>
+      </details>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
